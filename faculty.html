@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Profiles</title>
+  <link rel="stylesheet" href="css/faculty.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topnav" id="navbar">
+  <p class="topnavtitle"><b>CS DEPARTMENT</b></p>
+  <div class="nav-links">
+    <a class="active" href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="uc.html">Contact</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+</div>
+  <div class="faculty-section">
+    <h2 class="section-title">Meet Our Faculty</h2>
+
+    <!-- Faculty 1 -->
+    <div class="faculty-card fade-in right-image">
+      <div class="faculty-info">
+        <h3>Dr. Arunesh</h3>
+        <p>Head of Department, specializes in Artificial Intelligence and Machine Learning.</p>
+      </div>
+      <img src="images/aruneshsir.jpg" alt="Dr. A. Sharma">
+    </div>
+
+    <!-- Faculty 2 -->
+    <div class="faculty-card fade-in left-image">
+      <img src="images/rksir.jpeg" alt="Prof. B. Singh">
+      <div class="faculty-info">
+        <h3>Prof. Rajesh Kannan</h3>
+        <p>Expert in Cybersecurity and Networks, with over 15 years of teaching experience.</p>
+      </div>
+    </div>
+
+    <!-- Faculty 3 -->
+    <div class="faculty-card fade-in right-image">
+      <div class="faculty-info">
+        <h3>Dr A.Ranichitra</h3>
+        <p>Researcher in Data Science and Analytics, known for interactive teaching methods.</p>
+      </div>
+      <img src="images/rr.png" alt="Ms. C. Rao">
+    </div>
+
+  </div>
+
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.3 // triggers at 30% visibility
+  });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+<script>
+    function toggleMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.className === "topnav") {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>

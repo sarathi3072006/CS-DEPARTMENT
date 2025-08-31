@@ -1,0 +1,91 @@
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin: 40px 0;
+  color: #3b85ee;
+}
+
+.faculty-section {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.faculty-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* NEW: allow wrapping if needed */
+  margin: 50px 0;
+  padding: 20px;
+  border-radius:12px;
+  background: linear-gradient(to right, #ffffff, #d1dfff);
+  box-shadow: 1px 8px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+/* Fade in effect */
+.faculty-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faculty-card img {
+  width: 40%; /* CHANGED: make responsive */
+  min-width: 180px;
+  max-width: 300px;
+  height: auto; /* CHANGED: auto height */
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.faculty-info {
+  flex: 1; /* NEW: take remaining space */
+  padding: 0 20px;
+  min-width: 250px;
+}
+
+.faculty-info h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: rgb(85, 156, 255);
+  text-shadow: 1px 1px 1px rgb(0, 157, 255);
+}
+
+.faculty-info p {
+  font-size: 16px;
+  color: rgb(85, 156, 255);
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+}
+
+/* Alternating Layout */
+.faculty-card.left {
+  flex-direction: row;
+}
+
+.faculty-card.right {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faculty-card {
+    /* KEEP IT ROW - no override to column */
+    flex-wrap: wrap; /* allows wrapping if needed */
+    text-align: left;
+    justify-content: center;
+  }
+
+  .faculty-info {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .faculty-card img {
+    width: 40%;
+    min-width: 150px;
+    height: auto;
+  }
+}

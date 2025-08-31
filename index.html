@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS Department</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+   <div class="topnav" id="navbar">
+  <p class="topnavtitle"><b>CS DEPARTMENT</b></p>
+  <div class="nav-links">
+    <a class="active" href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="uc.html">Contact</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+</div>
+
+    <header class="deptimg-container">
+      <img class="deptimg" src="images/dept1.png" alt="Department"/>
+      <div class="img-gradient"></div>
+      <div class="depttext">DEPARTMENT OF <span>COMPUTER SCIENCE</span></div>
+    </header>
+
+   
+
+    <div class="image-marquee">
+      <div class="marquee-shadow-left"></div>
+      <div class="marquee-track">
+        <img src="images/clg.jpg" alt="pic1" />
+        <img src="images/dept.jpg" alt="pic2" />
+        <img src="images/infogencrowd.jpg" alt="pic3" />
+        <img src="images/lab1.jpeg" alt="pic4" />
+        <img src="images/lab 2.png" alt="pic5" />
+        <!-- Duplicate for smooth looping -->
+        <img src="images/clg.jpg" alt="pic1" />
+        <img src="images/dept.jpg" alt="pic2" />
+        <img src="images/infogencrowd.jpg" alt="pic3" />
+        <img src="images/lab1.jpeg" alt="pic4" />
+        <img src="images/lab 2.png" alt="pic5" />
+      </div>
+      <div class="marquee-shadow-right"></div>
+    </div>
+    <hr style="border: none; border-top: 3px solid #001eff; width: 70%; margin: 2em auto;">
+  
+
+    <section class="department-section">
+    <h2>About the Department</h2>
+    <p>
+      The Department of Computer Science was started in the Academic year 1988-89 to provide quality education for making the students competent to enter into the Global IT World as well as in the field of Research and Development with high moral, ethical and professional standards. It possesses dedicated and committed faculty members with rich experience and offers B.Sc, M.Phil and Ph.D. courses. These curriculum are well organized to provide a wide spectrum of choices to the student. The Department has well-equipped labs with latest configuration.
+    </p>
+
+    <h2>Vision</h2>
+    <p>
+      To renovate the rural students into high quality Software Professionals & Technologists by affording practical training as well as ethical and moral values.
+    </p>
+
+    <h2>Mission</h2>
+    <ul>
+      <li>To offer strong theoretical foundation harmonized with extensive practical training.</li>
+      <li>To revamp the rural students into innovative, competent and high quality Computer professionals.</li>
+      <li>To enrich the talents of students to keep pace with the current industrial trends.</li>
+      <li>To provide the students with best job opportunities and environment for quality education, professional competencies and life skills.</li>
+      <li>To support students for their career development, professional growth and to sustain in lifelong learning.</li>
+    </ul>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.className === "topnav") {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+  </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Under Construction</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #001612, #019180);
+      font-family: 'Comic Sans MS', Arial, sans-serif;
+
+      align-items: center;
+      height: 100vh;
+      color: #6cc9ff;
+      text-align: center;
+    }
+
+    img {
+      margin-top: 6%;
+      max-width: 80%;
+      max-height: 60vh;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 10px 0;
+      color: #5acbff;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 500px;
+      color: #78b5ff;
+    }
+
+    .blinking {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topnav" id="navbar">
+  <p class="topnavtitle"><b>CS DEPARTMENT</b></p>
+  <div class="nav-links">
+    <a class="active" href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="uc.html">Contact</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+</div>
+<div>
+  <img src="images/uc-removebg-preview.png" alt="Under Construction Meme">
+  <h1 class="blinking">🚧 Under Construction 🚧</h1>
+  We’re cooking something spicy 👨‍💻🍳<br>Come back later or bring snacks.
+</div>
+
+
+<script>
+    function toggleMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.className === "topnav") {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>
+
