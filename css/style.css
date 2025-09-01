@@ -127,8 +127,18 @@
     line-height: 1.14;
     width: 100vw;
   }
-  .image-marquee { height: 90px; }
-  .image-marquee img { height: 60px; margin-right: 12px; border-width: 2px; }
+
+  /* Make images & other sections breathe */
+  .image-marquee {
+    width: 92%;
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .image-marquee img {
+    height: 55px;
+    margin-right: 10px;
+  }
 }
 
 hr {
@@ -210,3 +220,46 @@ hr {
   position: absolute;
   left: 0;
 }
+
+@media (max-width: 650px) {
+  /* Department Section */
+  .department-section {
+    max-width: 92%;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Headings */
+  .department-section h2 {
+    font-size: 1.3rem; /* Smaller for mobile */
+    margin: 0.8em 0 0.5em;
+  }
+
+  /* Adjust left border of heading */
+  .department-section h2::before {
+    left: -10px;
+    width: 3px;
+  }
+
+  /* Paragraphs */
+  .department-section p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  /* Mission List */
+  .department-section ul {
+    padding-left: 1em;
+  }
+
+  .department-section ul li {
+    font-size: 0.92rem;
+    margin-bottom: 0.7em;
+    padding-left: 1.2em;
+  }
+
+}
+
