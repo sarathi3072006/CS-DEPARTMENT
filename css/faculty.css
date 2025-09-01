@@ -23,6 +23,7 @@
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
+  border: 5px solid red; /* TEST */
 }
 /* Fade in effect */
 .faculty-card.visible {
