@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* NEW: allow wrapping if needed */
   margin: 50px 0;
   padding: 20px;
   border-radius:12px;
@@ -73,7 +72,7 @@
 @media (max-width: 768px) {
   .faculty-card {
     /* KEEP IT ROW - no override to column */
-    flex-wrap: wrap; /* allows wrapping if needed */
+    flex-wrap: nowrap; /* FORCE NO WRAP */
     text-align: left;
     justify-content: center;
   }
