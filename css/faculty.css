@@ -71,20 +71,33 @@
 /* Responsive */
 @media (max-width: 768px) {
   .faculty-card {
-    /* KEEP IT ROW - no override to column */
-    flex-wrap: nowrap; /* FORCE NO WRAP */
-    text-align: left;
-    justify-content: center;
-  }
-
-  .faculty-info {
-    text-align: left;
-    padding: 10px;
+    flex-direction: row; /* Keep image & text side by side */
+    flex-wrap: nowrap; /* Prevent stacking */
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px; /* Add spacing */
   }
 
   .faculty-card img {
-    width: 40%;
-    min-width: 150px;
+    width: 35%; /* Make image smaller on mobile */
+    min-width: 120px;
+    max-width: 160px;
     height: auto;
+  }
+
+  .faculty-info {
+    flex: 1; /* Text takes remaining space */
+    min-width: 0; /* Allow wrapping */
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .faculty-info h3 {
+    font-size: 18px; /* Slightly smaller heading */
+  }
+
+  .faculty-info p {
+    font-size: 14px; /* Slightly smaller paragraph */
   }
 }
