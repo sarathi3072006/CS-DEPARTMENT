@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Infogen 2K25 Events</title>
+    <style>
+        .dropdown-arrow {
+            float: right;
+            width: 1.2em;
+            height: 1.2em;
+            display: inline-block;
+            vertical-align: middle;
+            transition: transform 0.2s;
+        }
+        .event-heading.active .dropdown-arrow {
+            transform: rotate(90deg);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(120deg, #ffffff 60%, #adcfff 100%);
+        }
+        .main-poster {
+            display: block;
+            margin: 60px auto 0 auto;
+            max-width: 1000px;
+            width: 100%;
+            border-radius: 24px;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.28);
+        }
+        .main-title {
+            text-align: center;
+            color: #10abff;
+            margin-top: 30px;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 8px #b2eaff;
+        }
+        .main-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="../css/global.css?v=0.0.1">
+</head>
+<body>
+<div class="topnav" id="navbar">
+  <p class="topnavtitle"><b>CS DEPARTMENT</b></p>
+  <div class="nav-links">
+    <a class="active" href="../index.html">Home</a>
+    <a href="../events.html">Events</a>
+    <a href="../uc.html">Contact</a>
+    <a href="../faculty.html">Faculty</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+</div>
+    <img src="../images/2k24p1.jpg" alt="Infogen 2K25 Event Poster" class="main-poster">
+    <div class="main-title">Infogen 2K24</div>
+    <div class="main-subtitle">Join us for an exciting lineup of games and activities!</div>
+
+    <script>
+    function toggleMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.className === "topnav") {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>

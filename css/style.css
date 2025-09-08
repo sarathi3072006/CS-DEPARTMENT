@@ -172,7 +172,7 @@ hr {
 
 /* Headings */
 .department-section h2 {
-  color: #001eff;
+  color: #4b93ff;
   font-size: 1.9rem;
   margin: 1em 0 0.5em;
   position: relative;
@@ -187,7 +187,7 @@ hr {
   top: 5px;
   height: 80%;
   width: 4px;
-  background: #001eff;
+  background: #007bff;
   border-radius: 5px;
 }
 
