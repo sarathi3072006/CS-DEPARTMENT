@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Infogen 2K25 Events</title>
+<style>
+    .dropdown-arrow {
+        float: right;
+        width: 1.2em;
+        height: 1.2em;
+        display: inline-block;
+        vertical-align: middle;
+        transition: transform 0.2s;
+    }
+    .event-heading.active .dropdown-arrow {
+        transform: rotate(90deg);
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: linear-gradient(120deg, #ffffff 60%, #adcfff 100%);
+    }
+    .main-poster {
+        display: block;
+        margin: 60px auto 0 auto;
+        max-width: 1000px;
+        width: 100%;
+        border-radius: 24px;
+        box-shadow: 0 12px 48px rgba(0,0,0,0.28);
+    }
+    .main-title {
+        text-align: center;
+        color: #25beff;
+        margin-top: 30px;
+        font-size: 2.8em;
+        text-shadow: 2px 2px 8px #b2eaff;
+    }
+    .main-subtitle {
+        text-align: center;
+        color: #555;
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+    .events-section {
+        max-width: 700px;
+        margin: 50px auto;
+        background: linear-gradient(120deg, #f3fbff 60%, #cfe3ff 100%);
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        padding: 50px 40px;
+    } 
+    .rules-heading {
+        cursor: pointer;
+        padding: 15px;
+        margin: 0 0 20px 0;
+        border-bottom: 1px solid #eee;
+        background: #cfe3ff;
+        font-size: 1em;
+        transition: background 0.2s;
+        text-align: center;
+        border-radius: 30px;
+    }
+    .event-heading {
+        cursor: pointer;
+        padding: 15px;
+        margin: 0;
+        border-bottom: 1px solid #eee;
+        background: #cfe3ff;
+        font-size: 1em;
+        transition: background 0.2s;
+    }
+    .event-heading:hover {
+        background: #ffffff;
+    }
+    .slogan {
+        color: #007acc;
+        font-style: italic;
+        text-align: center;
+    }
+    .event-info {
+        display: none;
+        padding: 15px;
+        background: #fafafa;
+        border-bottom: 1px solid #eee;
+        animation: fadeIn 0.3s;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    ul { margin: 10px 0 15px 20px; }
+</style>
+ <link rel="stylesheet" href="../css/global.css?v=0.0.1">
+</head>
+<body>
+
+<div class="topnav" id="navbar">
+  <p class="topnavtitle"><b>CS DEPARTMENT</b></p>
+  <div class="nav-links">
+    <a class="active" href="../index.html">Home</a>
+    <a href="../events.html">Events</a>
+    <a href="../uc.html">Contact</a>
+    <a href="../faculty.html">Faculty</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+</div>
+
+<img src="../images/2k25p1.jpg" alt="Infogen 2K25 Event Poster" class="main-poster">
+<div class="main-title">INFOGEN 2K25</div>
+<div class="main-subtitle">Join us for an exciting lineup of games and activities!</div>
+
+<div class="events-section">
+    <div class="rules-heading"><b> GENERAL RULES </b> </div>
+    <div>
+        <ul>
+            <li>One team per Department.</li>
+            <li>Only UG CS / IT / CA students can participate.</li>
+            <li>Registration fee is Rs 200/- per student.</li>
+            <li>One can participate in a maximum of two events, excluding online events.</li>
+            <li>Rules will not be changed under any circumstances.</li>
+            <li>Mobile phones are not allowed during the events.</li>
+            <li>Confirm your registration through <a href="https://forms.gle/Y6tDR5jYb3CKdddG7" target="_blank">this form</a> on or before 10.09.2025.</li>
+            <li>Strict discipline should be maintained.</li>
+            <li>Formal dress code should be followed.</li>
+            <li>LCD projector will be provided for presentations.</li>
+            <li>Lunch, Tea, and Snacks will be provided.</li>
+            <li>A Bonafide Certificate and ID card are must.</li>
+            <li>Judges’ decision will be final.</li>
+            <li>No TA/DA will be provided.</li>
+            <li>E-Certificate for all the participants will be provided.</li>
+        </ul>
+    </div>
+
+    <h2 style="text-align:center;margin-bottom: 1em;">What's Happening?</h2>
+
+    <!-- Scripta -->
+        <div class="event-heading" onclick="toggleInfo('game1', this)"><b>SCRIPTA (Paper Presentation)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game1">
+        <p class="slogan">“Where Ideas Take Flight”</p>
+        <br>
+        <b>Topics:</b>
+        <ul>
+            <li>The Role of IoT in Building Smart Cities</li>
+            <li>Virtual Reality and Augmented Reality in Education</li>
+            <li>Prompt Engineering: The New Skill for the AI Era</li>
+            <li>ChatGPT vs Traditional Search Engines</li>
+            <li>Blockchain Applications Beyond Cryptocurrency</li>
+            <li>Big Data Analytics: Turning Data into Decisions</li>
+            <li>Zero Trust Security Model in Cloud Computing</li>
+        </ul>
+        <b>Rules:</b>
+        <ul>
+            <li>Only Two Members per Team.</li>
+            <li>Presentation duration: 6 mins (4 mins presentation + 2 mins query).</li>
+            <li>Both members must be involved.</li>
+            <li>Soft copy of paper to <a href="mailto:infogencs25@gmail.com">infogencs25@gmail.com</a> on or before 09.09.2025.</li>
+            <li>Maximum pages: 8; Font: Times New Roman, Size: 10, Line spacing: 1.5</li>
+            <li>Only PowerPoint presentations allowed.</li>
+            <li>Selected papers intimated on 10.09.2025 via email.</li>
+        </ul>
+    </div>
+
+    <!-- Cipher Chase -->
+    <div class="event-heading" onclick="toggleInfo('game2', this)"><b>CIPHER CHASE (Clue Hunt)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game2">
+        <p class="slogan">“Crack the Code, Claim the Prize”</p>
+        <br>
+        <ul>
+            <li>Two participants per team.</li>
+            <li>Sequence of questions; first-round answer is clue for next round.</li>
+            <li>Only one answer per question allowed.</li>
+            <li>Team with maximum clues wins; tie resolved by submission time.</li>
+            <li>Participants should not share clues or solutions.</li>
+        </ul>
+    </div>
+
+    <!-- Graphica -->
+    <div class="event-heading" onclick="toggleInfo('game3', this)"><b>GRAPHICA (Poster Making)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game3">
+        <p class="slogan">“Creativity Meets Clarity”</p>
+        <br>
+        <ul>
+            <li>One member per team.</li>
+            <li>Theme given on the spot.</li>
+            <li>Posters must be prepared in MS Word during competition.</li>
+            <li>Pre-prepared posters or copied content not allowed.</li>
+            <li>Judged on creativity, clarity, relevance, and presentation.</li>
+            <li>Organizers may use posters for promotional purposes.</li>
+            <li>Time duration: 1 hour.</li>
+        </ul>
+    </div>
+
+    <!-- Junk Genius -->
+    <div class="event-heading" onclick="toggleInfo('game4', this)"><b>JUNKGENIUS(Art from E-Waste)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game4">
+        <p class="slogan">“Turning Scrap into Splendor”</p>
+        <br>
+        <ul>
+            <li>Two members per department.</li>
+            <li>Products must be made only from E-Waste.</li>
+            <li>Bring all necessary materials; product designed during allotted time.</li>
+            <li>Time duration: 1 hour.</li>
+        </ul>
+    </div>
+ 
+    <!-- Gigglegram -->
+    <div class="event-heading" onclick="toggleInfo('game5', this)"><b>GIGGLEGRAM (Meme Creation)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game5">
+        <p class="slogan">“Turn Pixels into Punchlines”</p>
+        <br>
+        <ul>
+            <li>One participant per team.</li>
+            <li>Submit memes to <a href="mailto:infogencs25@gmail.com">infogencs25@gmail.com</a> on or before 10.09.2025.</li>
+            <li>Topic: “Code in Practice vs Code in Exam”.</li>
+            <li>Memes must be original, JPG/PNG, suitable for general audience.</li>
+            <li>If it's a video meme max Time duration: 60 seconds.</li>
+            <li>Organizers may use memes for promotional purposes.</li>
+        </ul>
+    </div>
+
+    <!-- Smartsphere -->
+    <div class="event-heading" onclick="toggleInfo('game6', this)"><b>SMARTSPHERE(IOT Model Display)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game6">
+        <p class="slogan">“Crafting Tomorrow’s Smart World”</p>
+        <br>
+        <ul>
+            <li>Two participants per team.</li>
+            <li>Models must be IoT-based; participants bring all components.</li>
+            <li>Only working models prepared by participants accepted; pre-purchased models not allowed.</li>
+            <li>Time for setup and presentation: 1 hour.</li>
+            <li>Judged on innovation, technical accuracy, practicality, and presentation.</li>
+        </ul>
+    </div>
+
+    <!-- CineSpark -->
+    <div class="event-heading" onclick="toggleInfo('game7', this)"><b>CINESPARK (Short Film)</b> <span class="dropdown-arrow"><svg width="18" height="18" viewBox="0 0 18 18" style="vertical-align:middle" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4L12 9L6 14" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+    <div class="event-info" id="game7">
+        <p class="slogan">“Frame Your Vision, Ignite the Screen”</p>
+        <br>
+        <b>Topics:</b>
+        <ul>
+            <li>Digital Footprints</li>
+            <li>Lost Connection</li>
+            <li>Beyond the Screen</li>
+            <li>Ctrl + Alt + Hope</li>
+            <li>Virtual Reality, Real Emotions</li>
+        </ul>
+        <b>Rules:</b>
+        <ul>
+            <li>One team per department; maximum 4 participants.</li>
+            <li>Original film, submitted at registration desk on event day.</li>
+            <li>Suitable for general audience; offensive content disallowed.</li>
+            <li>Clean, respectful language mandatory; inappropriate language leads to disqualification.</li>
+            <li>Technical issues are participant responsibility.</li>
+            <li>Export formats: MP4/AVI/MOV; minimum resolution: 720p.</li>
+            <li>Time duration: 3–5 minutes.</li>
+        </ul>
+    </div>
+
+</div>
+
+<script>
+    function toggleInfo(id, headingElem) {
+        var info = document.getElementById(id);
+        var isOpen = info.style.display === "block";
+        info.style.display = isOpen ? "none" : "block";
+        if (headingElem) headingElem.classList.toggle("active", !isOpen);
+    }
+    function toggleMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.className === "topnav") {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+</script>
+</body>
+</html>
