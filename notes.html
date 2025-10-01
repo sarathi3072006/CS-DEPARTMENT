@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Profiles</title>
+  <link rel="stylesheet" href="css/global.css?v=0.0.2">
+</head>
+<body>
+
+<div class="topnav" id="navbar">
+  <p class="topnavtitle"><b>CS DEPARTMENT</b></p>
+  <div class="nav-links">
+    <a class="active" href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="uc.html">Contact</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+<script>
+    function toggleMenu() {
+      var nav = document.getElementById("navbar");
+      if (nav.className === "topnav") {
+        nav.className += " responsive";
+      } else {
+        nav.className = "topnav";
+      }
+    }
+  </script>
+</body>
+</html>
