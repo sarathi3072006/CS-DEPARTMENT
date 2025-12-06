@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
 }
 
-/* -------- Top Navigation -------- */
+/* -------- side Navigation -------- */
 .sidenav {
   background: rgba(101, 173, 255, 0.92);
   overflow: hidden;
@@ -73,45 +73,4 @@ body {
 }
 
 
-/* Responsive Styles */
-/* Responsive */
-.sidenav .icon {
-  display: none;
-}
-/* Mobile view */
-@media screen and (max-width: 768px) {
-  .sidenavtitle {
-    font-size: 21px;  /* Smaller only on mobile */
-    padding: 14px 12px; /* Adjust padding */
-    margin-left: 8px;   /* Give more room */
-  }
-  .snav-links a { 
-    display: none; 
-  }
-  .snav-links .icon {
-    display: block;
-    font-size: 26px;
-    padding: 20px;
-    cursor: pointer;
-  }
 
-  /* Only overlay when responsive (hamburger clicked) */
-  .sidenav.responsive .snav-links {
-    position: fixed;   /* overlay only here */
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 17, 34, 0.97);
-    text-align: center;
-    flex-direction: column;
-    display: flex;
-    z-index: 999;
-  }
-
-  .sidenav.responsive .snav-links a {
-    display: block;
-    width: 100%;
-    padding: 15px 22px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-}
