@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
 }
 
-/* -------- side Navigation -------- */
+/* -------- Top Navigation -------- */
 .sidenav {
   background: rgba(101, 173, 255, 0.92);
   overflow: hidden;
@@ -62,15 +62,5 @@ body {
   margin-top: 0;
   font-family: 'Trebuchet MS', Verdana, Geneva, sans-serif;
 }
-
-/* Hamburger Icon */
-.sidenav .icon {
-  display: none;
-  float: right;
-  font-size: 26px;
-  padding: 20px;
-  cursor: pointer;
-}
-
 
 
