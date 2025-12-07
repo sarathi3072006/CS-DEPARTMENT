@@ -10,7 +10,9 @@
   max-width: 1000px;
   margin: auto;
 }
-
+.cardlink {
+  text-decoration: none;
+}
 .faculty-card {
   display: flex;
   align-items: center;
@@ -23,6 +25,14 @@
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
+  transition: all .2s ease-in-out;
+}
+.faculty-card:hover {
+ 
+  box-shadow:0 20px 30px rgba(0,0,0,.35);
+  z-index:100;   /* required */
+  background: linear-gradient(to right, #f1faff, #9ebbff);
+ 
 }
 /* Fade in effect */
 .faculty-card.visible {
