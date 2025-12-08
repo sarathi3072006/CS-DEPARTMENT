@@ -1,66 +1,109 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/* ------- Sidebar ------- */
+#sidebar {
+    top: 60px;
+    position: fixed;
+    left: -200px; /* hidden initially */
+    width: 200px;
+    height: 100vh;
+    background: #2d6cdf;
+    padding: 15px 15px;
+    color: white;
+    transition: left 0.35s ease;
+    border-radius: 0 0 10px 0;
+    z-index: 1001;opacity: 0.95;
 }
 
-body {
-  background: linear-gradient(120deg, #ffffff 60%, #adcfff 100%);
-  font-family: "Segoe UI", "Roboto", sans-serif;
-  min-height: 100vh;
+/* Slide in */
+#sidebar.active {
+    left: 0;
 }
 
-/* -------- Top Navigation -------- */
-.sidenav {
-  background: rgba(101, 173, 255, 0.92);
-  overflow: hidden;
-  flex-direction: column;
-  box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.25);
-  position: relative;   /* not fixed anymore */
-  width: 150px;
-  height: 100%;
-  line-height: 60px;
-  z-index: 10;
-  display: block;
-  align-items: center;
-  justify-content: space-between;
+/* Arrow Button */
+#toggleBtn {
+    position: absolute;
+    top: 1px;;
+    z-index: 1002;
+    right: -55px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: #2d6cdf;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: right 0.35s ease, transform 0.35s ease;
 }
 
-/* Nav links default */
-.snav-links a {
-  color: #f2f2f2;
-  display: flex;
-  align-items:end;
-  padding-right: 15%;
-  flex-direction: column; /* IMPORTANT */
-  width: 100%;
-  font-size: 18px;
-  text-decoration: none;
-  text-decoration-thickness: 3%;
-  transition: 0.3s;
+#toggleBtn.open {
+    transform: rotate(180deg);
+        border-radius: 5px 0 0 5px ;
+
 }
 
-.sidenav a.active {
-  background: #1b76ff;
-  color: #fff;
-  box-shadow: 0px 6px 24px rgba(0,255,225,0.09);
+.side-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+/* Links */
+.link {
+    display: block;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 19px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+
 }
 
-.sidenav a:hover{
-  background: #e1f7f1;
-  color: #021614;
-  transform: scale(1.08) translateY(-2px);
-  font-weight: 600;
+.link:hover {
+    opacity: 0.7;
 }
 
-.sidenavtitle {
-  padding-left: 3%;
-  color: #fefefe;
-  font-size: 15px;
-  text-shadow: 2px 2px 10px #2683d5c2, 0 1px 14px #000b;
-  letter-spacing: 2px;
-  margin-top: 0;
-  font-family: 'Trebuchet MS', Verdana, Geneva, sans-serif;
+/* ------- Accordion ------- */
+.accordion {
+    background: none;
+    color: white;
+    cursor: pointer;
+    padding: 12px 0;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 19px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+
 }
 
+.panel {
+    display: none;
+    padding-left: 15px;
+}
 
+.panel a {
+    display: block;
+    color: #e6e6e6;
+    padding: 8px 0;
+    text-decoration: none;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.panel a:hover {
+    opacity: 0.7;
+}
+
+/* -------- Main Content -------- */
+.content {
+    top: 80px;
+    margin-left: 20px;
+    position: relative;
+    padding: 40px;
+}

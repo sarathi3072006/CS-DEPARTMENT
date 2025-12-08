@@ -20,18 +20,60 @@
     <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
   </div>
 </div>
-<div class="sidenav" id="snavbar">
-  <p class="sidenavtitle"><b>CS DEPARTMENT</b></p>
-  <div class="snav-links">
-    <a class="active" href="index.html">Home</a>
-    <a href="events.html">Events</a>
-    <a href="uc.html">Contact</a>
-    <a href="faculty.html">Faculty</a>
-    <a href="resources.html">Resources</a>
-    <a href="others.html">Others</a>
-  </div>
-</div>
+<!--==============================================================================================================================================================-->
+<!-- Sidebar -->
+<div id="sidebar">
+    <button id="toggleBtn">
+        <span id="arrow">➤</span>
+    </button>
 
+    <h2 class="side-title">Menu</h2>
+    <!-- Accordion 1 -->
+    <button class="accordion">syllabus ▾</button>
+    <div class="panel">
+        <a href="#">B.Sc. Computer Science OBE Syllabus</a>
+        <a href="#">M.Sc. Computer Science</a>
+    </div>
+
+    <!-- Accordion 2 -->
+    <button class="accordion">Settings ▾</button>
+    <div class="panel">
+        <a href="#">Account</a>
+        <a href="#">Themes</a>
+    </div>
+
+    <a href="#" class="link">Home</a>
+    <a href="#" class="link">Profile</a>
+</div>
+<!--==============================================================================================================================================================-->
+<!-- Page Content -->
+<div class="content">
+    <h1>Your Main Page Content</h1>
+    <p>This is your normal page area.</p>
+</div>
+<!--==============================================================================================================================================================-->
+<script>
+// Sidebar toggle
+const sidebar = document.getElementById("sidebar");
+const toggleBtn = document.getElementById("toggleBtn");
+
+toggleBtn.onclick = () => {
+    sidebar.classList.toggle("active");
+    toggleBtn.classList.toggle("open");
+};
+
+// Accordion functionality
+let acc = document.getElementsByClassName("accordion");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+        let panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+    };
+}
+</script>
+
+<!--==============================================================================================================================================================-->
   <script>
     function toggleMenu() {
       var nav = document.getElementById("navbar");
