@@ -80,7 +80,8 @@
 
   </div>
 <!--==============================================================================================================================================================-->
-  <script>
+ <script src="js/global.js"></script>
+ <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -95,15 +96,6 @@
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 
-<script>
-    function toggleMenu() {
-      var nav = document.getElementById("navbar");
-      if (nav.className === "topnav") {
-        nav.className += " responsive";
-      } else {
-        nav.className = "topnav";
-      }
-    }
-  </script>
+
 </body>
 </html>

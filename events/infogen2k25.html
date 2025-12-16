@@ -263,20 +263,13 @@
 
 </div>
 <!--==============================================================================================================================================================-->
+<script src="../js/global.js"></script>
 <script>
     function toggleInfo(id, headingElem) {
         var info = document.getElementById(id);
         var isOpen = info.style.display === "block";
         info.style.display = isOpen ? "none" : "block";
         if (headingElem) headingElem.classList.toggle("active", !isOpen);
-    }
-    function toggleMenu() {
-      var nav = document.getElementById("navbar");
-      if (nav.className === "topnav") {
-        nav.className += " responsive";
-      } else {
-        nav.className = "topnav";
-      }
     }
 </script>
 </body>
