@@ -53,9 +53,10 @@
 <script src="js/resources.js"></script>
 <script>
 function openPDF(filename) {
-  
+    const pdfPath = new URL("pdfs/" + filename, window.location.href).href;
+
     window.open(
-        "pdfjs/web/viewer.html?file=/pdfs/"+filename,
+        "pdfjs/web/viewer.html?file=" + encodeURIComponent(pdfPath),
         "_blank"
     );
 }
