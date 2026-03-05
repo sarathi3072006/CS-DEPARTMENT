@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Gateway</title>
+<style>
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI, sans-serif;
+}
+body { height: 100vh; overflow: hidden; }
+
+.container {
+  position: relative;
+  width: 100%; height: 100vh;
+}
+
+/* LEFT triangle - Resources */
+.resources {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: #2e86de;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.resources::before {
+  content: "";
+  position: absolute;
+  width: 100%; height: 100%;
+  background: url("https://pngimg.com/uploads/book/book_PNG2114.png") 22% 45% / 260px no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.resources .btn-wrap {
+  position: absolute;
+  top: 26%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: white;
+}
+
+/* RIGHT triangle - Events */
+.events {
+  position: absolute;
+  width: 100%; height: 100%;
+  background: #1a5276;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.events::before {
+  content: "";
+  position: absolute;
+  width: 100%; height: 100%;
+  background: url("https://pngimg.com/uploads/people/people_PNG941.png") 78% 58% / 300px no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.events .btn-wrap {
+  position: absolute;
+  bottom: 22%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: white;
+}
+
+/* Labels */
+.section-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.admin-btn {
+  padding: 18px 36px;
+  font-size: 17px;
+  font-weight: 600;
+  border: 2px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  background: white;
+  color: #1a5276;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.admin-btn:hover {
+  background: transparent;
+  color: white;
+  transform: scale(1.06);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.3);
+}
+
+/* Diagonal white line */
+.divider {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+.divider::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    transparent calc(50% - 2px),
+    rgba(255,255,255,0.55) calc(50% - 2px),
+    rgba(255,255,255,0.55) calc(50% + 2px),
+    transparent calc(50% + 2px)
+  );
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="resources">
+    <div class="btn-wrap">
+      <span class="section-label">📚 Admin Portal</span>
+      <button class="admin-btn" onclick="location.href='resources-admin.html'">
+        Resources Admin Panel
+      </button>
+    </div>
+  </div>
+
+  <div class="events">
+    <div class="btn-wrap">
+      <span class="section-label">🎉 Admin Portal</span>
+      <button class="admin-btn" onclick="location.href='events-admin.html'">
+        Events Admin Panel
+      </button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+</div>
+</body>
+</html>
